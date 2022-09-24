@@ -1,9 +1,13 @@
 import Keyboard from "../Keyboard/Keyboard";
+import Screen from "../Screen/Screen";
 
 const Calculator = () => {
   return (
-    <Keyboard />
-  )
-}
+    <>
+      <Screen/>
+      <Keyboard/>
+    </>
+  );
+};
 
 export default Calculator;
