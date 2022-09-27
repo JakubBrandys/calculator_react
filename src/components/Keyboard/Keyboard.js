@@ -1,6 +1,7 @@
-import ButtonNumber from "../ButtonNumber/ButtonNumber"
-import ButtonEqual from "../ButtonEqual/ButtonEqual";
-import ButtonSign from "../ButtonSign/ButtonSign";
+import ButtonNumber from "../Buttons/ButtonNumber/ButtonNumber"
+import ButtonEqual from "../Buttons/ButtonEqual/ButtonEqual";
+import ButtonSign from "../Buttons/ButtonSign/ButtonSign";
+import ButtonDot from "../Buttons/ButtonDot/ButtonDot";
 
 const Keyboard = () => {
   return (
@@ -14,11 +15,12 @@ const Keyboard = () => {
       <ButtonNumber number="7" />
       <ButtonNumber number="8" />
       <ButtonNumber number="9" />
-      <ButtonEqual equal="=" />
+      <ButtonEqual />
       <ButtonSign sign="+" />
       <ButtonSign sign="-" />
       <ButtonSign sign="x" />
       <ButtonSign sign= "÷" />
+      <ButtonDot />
     </>
   );
 };
