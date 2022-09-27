@@ -1,5 +1,5 @@
 import Button from "../Button/Button"
-
+import ButtonEqual from "../ButtonEqual/ButtonEqual";
 const Keyboard = () => {
   return (
     <>
@@ -12,6 +12,7 @@ const Keyboard = () => {
       <Button value="7" />
       <Button value="8" />
       <Button value="9" />
+      <ButtonEqual equal="=" />
     </>
   )
 }
