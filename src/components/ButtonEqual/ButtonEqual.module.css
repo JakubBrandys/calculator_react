@@ -1,6 +1,9 @@
 .equal {
-color: white;
+    width: 75px;
+    height: 300px;
+    color: #FFFFFF;
+    font-size: 20px;
     background-color: #2BBBAD;
-    height: 100%;
     border: none;
+
 }

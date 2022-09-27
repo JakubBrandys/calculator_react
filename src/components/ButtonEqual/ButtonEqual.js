@@ -1,8 +1,8 @@
-import style from "./ButtonEqual.module.css"
+import styled from "./ButtonEqual.module.css"
 
 const ButtonEqual = ({ equal }) => {
   return (
-    <button className={style.equal}>{equal}</button>
+    <button className={styled.equal}>{equal}</button>
   );
 };
 
