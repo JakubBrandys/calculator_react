@@ -1,4 +1,4 @@
-import styled from "./ButtonSign.module.css"
+import styled from "./ButtonSign.module.css";
 
 const ButtonSign = ({ sign }) => {
   return (
@@ -6,4 +6,4 @@ const ButtonSign = ({ sign }) => {
   );
 };
 
-export default ButtonSign
+export default ButtonSign;
