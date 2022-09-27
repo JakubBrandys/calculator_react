@@ -1,17 +1,17 @@
-import Button from "../Button/Button"
-import ButtonEqual from "../ButtonEqual/ButtonEqual";
+import ButtonNumber from "../ButtonNumber/ButtonNumber"
+
 const Keyboard = () => {
   return (
     <>
-      <Button value="1" />
-      <Button value="2" />
-      <Button value="3" />
-      <Button value="4" />
-      <Button value="5" />
-      <Button value="6" />
-      <Button value="7" />
-      <Button value="8" />
-      <Button value="9" />
+      <ButtonNumber number="1" />
+      <ButtonNumber number="2" />
+      <ButtonNumber number="3" />
+      <ButtonNumber number="4" />
+      <ButtonNumber number="5" />
+      <ButtonNumber number="6" />
+      <ButtonNumber number="7" />
+      <ButtonNumber number="8" />
+      <ButtonNumber number="9" />
       <ButtonEqual equal="=" />
     </>
   )

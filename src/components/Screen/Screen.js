@@ -1,8 +1,8 @@
-import style from "./Screen.module.css";
+import styled from "./Screen.module.css";
 
 const Screen = () => {
     return (
-        <div className={style.screen} />
+        <div className={styled.screen} />
     );
 };
 
