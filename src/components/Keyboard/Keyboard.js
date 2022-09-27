@@ -20,7 +20,7 @@ const Keyboard = () => {
       <ButtonSign sign="x" />
       <ButtonSign sign= "÷" />
     </>
-  )
-}
+  );
+};
 
 export default Keyboard;
