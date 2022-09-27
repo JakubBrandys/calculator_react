@@ -1,4 +1,4 @@
-import styled from "./ButtonEqual.module.css"
+import styled from "./ButtonEqual.module.css";
 
 const ButtonEqual = ({ equal }) => {
   return (
@@ -6,4 +6,4 @@ const ButtonEqual = ({ equal }) => {
   );
 };
 
-export default ButtonEqual
+export default ButtonEqual;
