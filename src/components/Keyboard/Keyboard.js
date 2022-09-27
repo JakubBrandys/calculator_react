@@ -1,6 +1,7 @@
 import ButtonNumber from "../ButtonNumber/ButtonNumber"
 import ButtonEqual from "../ButtonEqual/ButtonEqual";
 import ButtonSign from "../ButtonSign/ButtonSign";
+import ButtonAC from "../ButtonAC/ButtonAC";
 
 const Keyboard = () => {
   return (
@@ -19,6 +20,7 @@ const Keyboard = () => {
       <ButtonSign sign="-" />
       <ButtonSign sign="x" />
       <ButtonSign sign= "÷" />
+        <ButtonAC />
     </>
   );
 };
