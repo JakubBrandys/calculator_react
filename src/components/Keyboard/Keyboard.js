@@ -1,4 +1,4 @@
-import ButtonNumber from "../Buttons/ButtonNumber/ButtonNumber"
+import ButtonNumber from "../Buttons/ButtonNumber/ButtonNumber";
 import ButtonEqual from "../Buttons/ButtonEqual/ButtonEqual";
 import ButtonSign from "../Buttons/ButtonSign/ButtonSign";
 import ButtonDot from "../Buttons/ButtonDot/ButtonDot";
