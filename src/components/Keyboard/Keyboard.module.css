@@ -4,3 +4,14 @@
     grid-gap: 20px;
     padding: 20px;
 }
+
+button {
+  cursor: pointer;
+  transition: 200ms;
+}
+
+button:hover {
+  scale: 1.05;
+  box-shadow: 0 0 4px -2px #252525;
+}
+
