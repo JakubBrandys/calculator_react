@@ -5,4 +5,5 @@
     font-size: 20px;
     background-color: #2BBBAD;
     border: none;
+    grid-area: 2 / 4 / 6 / 5
 }

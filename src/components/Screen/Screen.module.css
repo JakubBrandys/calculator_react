@@ -1,6 +1,7 @@
 .screen {
-    width: 200px;
-    height: 100px;
-    background-color: #1C1E1FFF;
+    height: 80px;
+    background-color: #252525;
     color: white;
+    padding: 20px;
+    text-align: right;
 }
