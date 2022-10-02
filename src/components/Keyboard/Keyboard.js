@@ -5,7 +5,7 @@ import ButtonDot from "../Buttons/ButtonDot/ButtonDot";
 import ButtonAC from "../Buttons/ButtonAC/ButtonAC";
 import styled from "./Keyboard.module.css";
 
-const Keyboard = ({ getValue, clearScreen, getSign }) => {
+const Keyboard = ({ getValue, clearScreen, getSign, handleEqual }) => {
   return (
     <div className={styled.keyboard}>
       <ButtonSign getSign={getSign} sign="+" />
@@ -22,7 +22,7 @@ const Keyboard = ({ getValue, clearScreen, getSign }) => {
       <ButtonNumber getValue={getValue} number="2" />
       <ButtonNumber getValue={getValue} number="3" />
       <ButtonNumber getValue={getValue} number="0" />
-      <ButtonEqual getValue={getValue} />
+      <ButtonEqual handleEqual={handleEqual} />
       <ButtonDot getValue={getValue} />
       <ButtonAC clearScreen={clearScreen} />
     </div>
