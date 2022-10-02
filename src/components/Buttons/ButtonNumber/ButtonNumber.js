@@ -2,8 +2,8 @@ import styled from "./ButtonNumber.module.css";
 
 const ButtonNumber = ({ number, getValue }) => (
   <button
-    onClick={() => getValue(number)}
     className={styled.buttonNumber}
+    onClick={() => getValue(number)}
   >
     {number}
   </button>
