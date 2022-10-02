@@ -7,5 +7,6 @@ const ButtonEqual = ({ getValue }) => (
   >
     =
   </button>
-)
+);
+
 export default ButtonEqual;
