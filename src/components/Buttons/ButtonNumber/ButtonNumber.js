@@ -1,5 +1,12 @@
 import styled from "./ButtonNumber.module.css";
 
-const ButtonNumber = ({ number }) => <button className={styled.buttonNumber}>{number}</button>;
+const ButtonNumber = ({ number, getValue }) => (
+  <button
+    onClick={() => getValue(number)}
+    className={styled.buttonNumber}
+  >
+    {number}
+  </button>
+);
 
 export default ButtonNumber;

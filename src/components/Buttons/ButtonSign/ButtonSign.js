@@ -1,8 +1,13 @@
 import styled from "./ButtonSign.module.css";
 
-const ButtonSign = ({ sign }) => {
+const ButtonSign = ({ sign, getValue }) => {
   return (
-   <button className={styled.sign}>{sign}</button>
+   <button
+     onClick={() => getValue(sign)}
+     className={styled.sign}
+   >
+     {sign}
+   </button>
   );
 };
 

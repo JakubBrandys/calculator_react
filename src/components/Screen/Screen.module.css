@@ -1,7 +1,10 @@
 .screen {
-    height: 80px;
-    background-color: #252525;
-    color: white;
-    padding: 0 20px;
-    text-align: right;
+  height: 80px;
+  background-color: #252525;
+  color: white;
+  padding: 0 20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }

@@ -1,5 +1,12 @@
 import styled from "./ButtonAC.module.css";
 
-const ButtonAC = () => <button className={styled.buttonAc}>AC</button>;
+const ButtonAC = ({ clearScreen }) => (
+  <button
+    className={styled.buttonAc}
+    onClick={() => clearScreen()}
+  >
+    AC
+  </button>
+);
 
 export default ButtonAC;

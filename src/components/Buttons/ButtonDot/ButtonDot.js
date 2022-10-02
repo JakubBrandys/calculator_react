@@ -1,5 +1,12 @@
 import styled from "./ButtonDot.module.css";
 
-const ButtonDot = () => <button className={styled.ButtonDot}>.</button>;
+const ButtonDot = ({getValue}) => (
+  <button
+    onClick={() => getValue(".")}
+    className={styled.ButtonDot}
+  >
+    .
+  </button>
+);
 
 export default ButtonDot;
