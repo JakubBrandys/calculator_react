@@ -1,10 +1,10 @@
 import styled from "./ButtonSign.module.css";
 
-const ButtonSign = ({ sign, getValue }) => {
+const ButtonSign = ({ sign, getSign }) => {
   return (
    <button
      className={styled.sign}
-     onClick={() => getValue(sign)}
+     onClick={() => getSign(sign)}
    >
      {sign}
    </button>

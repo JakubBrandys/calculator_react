@@ -5,13 +5,13 @@ import ButtonDot from "../Buttons/ButtonDot/ButtonDot";
 import ButtonAC from "../Buttons/ButtonAC/ButtonAC";
 import styled from "./Keyboard.module.css";
 
-const Keyboard = ({ getValue, clearScreen }) => {
+const Keyboard = ({ getValue, clearScreen, getSign }) => {
   return (
     <div className={styled.keyboard}>
-      <ButtonSign getValue={getValue} sign="+" />
-      <ButtonSign getValue={getValue} sign="-" />
-      <ButtonSign getValue={getValue} sign="*" />
-      <ButtonSign getValue={getValue} sign= "÷" />
+      <ButtonSign getSign={getSign} sign="+" />
+      <ButtonSign getSign={getSign} sign="-" />
+      <ButtonSign getSign={getSign} sign="*" />
+      <ButtonSign getSign={getSign} sign= "÷" />
       <ButtonNumber getValue={getValue} number="7" />
       <ButtonNumber getValue={getValue} number="8" />
       <ButtonNumber getValue={getValue} number="9" />

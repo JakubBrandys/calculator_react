@@ -4,22 +4,47 @@ import styled from "./Calculator.module.css";
 import { useState } from "react";
 
 const Calculator = () => {
-  const [value, setValue] = useState("");
+  const [currentValue, setCurrentValue] = useState("");
+  const [previousValue, setPreviousValue] = useState("");
+  const [sign, setSign] = useState("");
+  const [twiceValueFlag, setTwiceValueFlag] = useState(false);
 
   const getValue = (buttonValue) => {
-    setValue((value) =>`${value + buttonValue}`)
-  }
+    if (sign && !twiceValueFlag) {
+      setCurrentValue("");
+      setTwiceValueFlag(true);
+    }
+
+    if (currentValue.length > 20) {
+      return;
+    }
+
+    setCurrentValue((currentValue) =>`${currentValue + buttonValue}`);
+  };
 
   const clearScreen = () => {
-    setValue("")
-  }
+    setCurrentValue("");
+    setPreviousValue("");
+    setSign("");
+    setTwiceValueFlag(false);
+  };
+
+  const getSign = (buttonSign) => {
+    if (twiceValueFlag) {
+      return;
+    }
+
+    setSign(buttonSign);
+    setPreviousValue(`${currentValue} ${buttonSign}`);
+  };
 
   return (
     <div className={styled.calculator}>
-      <Screen currentValue={value} previousValue="25325" />
+      <Screen currentValue={currentValue} previousValue={previousValue} />
       <Keyboard
         getValue={getValue}
         clearScreen={clearScreen}
+        getSign={getSign}
       />
     </div>
   );
