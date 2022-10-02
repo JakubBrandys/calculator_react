@@ -1,8 +1,12 @@
 import styled from "./Screen.module.css";
 
-const Screen = () => {
+const Screen = ({ value }) => {
     return (
-        <div className={styled.screen} />
+        <div
+          className={styled.screen}
+        >
+          {value}
+        </div>
     );
 };
 

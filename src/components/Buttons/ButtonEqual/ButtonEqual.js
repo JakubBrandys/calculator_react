@@ -1,4 +1,12 @@
 import styled from "./ButtonEqual.module.css";
 
-const ButtonEqual = () => <button className={styled.equal}>=</button>
+const ButtonEqual = ({ getValue }) => (
+  <button
+    className={styled.equal}
+    onClick={() => getValue("=")}
+  >
+    =
+  </button>
+);
+
 export default ButtonEqual;

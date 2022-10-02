@@ -5,26 +5,26 @@ import ButtonDot from "../Buttons/ButtonDot/ButtonDot";
 import ButtonAC from "../Buttons/ButtonAC/ButtonAC";
 import styled from "./Keyboard.module.css";
 
-const Keyboard = () => {
+const Keyboard = ({ getValue, clearScreen }) => {
   return (
     <div className={styled.keyboard}>
-      <ButtonSign sign="+" />
-      <ButtonSign sign="-" />
-      <ButtonSign sign="x" />
-      <ButtonSign sign= "÷" />
-      <ButtonNumber number="7" />
-      <ButtonNumber number="8" />
-      <ButtonNumber number="9" />
-      <ButtonNumber number="4" />
-      <ButtonNumber number="5" />
-      <ButtonNumber number="6" />
-      <ButtonNumber number="1" />
-      <ButtonNumber number="2" />
-      <ButtonNumber number="3" />
-      <ButtonNumber number="0" />
-      <ButtonEqual />
-      <ButtonDot />
-      <ButtonAC />
+      <ButtonSign getValue={getValue} sign="+" />
+      <ButtonSign getValue={getValue} sign="-" />
+      <ButtonSign getValue={getValue} sign="*" />
+      <ButtonSign getValue={getValue} sign= "÷" />
+      <ButtonNumber getValue={getValue} number="7" />
+      <ButtonNumber getValue={getValue} number="8" />
+      <ButtonNumber getValue={getValue} number="9" />
+      <ButtonNumber getValue={getValue} number="4" />
+      <ButtonNumber getValue={getValue} number="5" />
+      <ButtonNumber getValue={getValue} number="6" />
+      <ButtonNumber getValue={getValue} number="1" />
+      <ButtonNumber getValue={getValue} number="2" />
+      <ButtonNumber getValue={getValue} number="3" />
+      <ButtonNumber getValue={getValue} number="0" />
+      <ButtonEqual getValue={getValue} />
+      <ButtonDot getValue={getValue} />
+      <ButtonAC clearScreen={clearScreen} />
     </div>
   );
 };
