@@ -10,9 +10,30 @@ const Calculator = () => {
   const [twiceValueFlag, setTwiceValueFlag] = useState(false);
 
   const getValue = (buttonValue) => {
+    if (isNaN(Number(currentValue))) {
+      clearScreen();
+    }
+
     if (sign && !twiceValueFlag) {
       setCurrentValue("");
       setTwiceValueFlag(true);
+    }
+
+    if (currentValue === "0" && buttonValue === "0") {
+      return;
+    }
+
+    if (currentValue === "0") {
+      setCurrentValue("");
+    }
+
+    if (currentValue.includes(".") && buttonValue === ".") {
+      return;
+    }
+
+    if (!currentValue && buttonValue === ".") {
+      setCurrentValue("0.");
+      return;
     }
 
     if (currentValue.length > 20) {
@@ -34,9 +55,48 @@ const Calculator = () => {
       return;
     }
 
+    if (isNaN(Number(currentValue))) {
+      clearScreen();
+      return;
+    }
+
+    if (!currentValue && buttonSign !== "-") {
+      return;
+    }
+
     setSign(buttonSign);
     setPreviousValue(`${currentValue} ${buttonSign}`);
   };
+
+  const handleEqual = () => {
+    if (!sign) {
+      return;
+    }
+
+    switch (sign) {
+      case "+":
+        setCurrentValue(String(Number(previousValue.slice(0, -1)) + Number(currentValue)));
+        break;
+      case "-":
+        setCurrentValue(String(Number(previousValue.slice(0, -1)) - Number(currentValue)));
+        break;
+      case "*":
+        setCurrentValue(String(Number(previousValue.slice(0, -1)) * Number(currentValue)));
+        break;
+      case "÷":
+        if (currentValue === "0") {
+          setCurrentValue("Cant divide by 0");
+          break;
+        }
+
+        setCurrentValue(String(Number(previousValue.slice(0, -1)) / Number(currentValue)));
+        break;
+    }
+
+    setPreviousValue("");
+    setSign("");
+    setTwiceValueFlag(false);
+  }
 
   return (
     <div className={styled.calculator}>
@@ -45,6 +105,7 @@ const Calculator = () => {
         getValue={getValue}
         clearScreen={clearScreen}
         getSign={getSign}
+        handleEqual={handleEqual}
       />
     </div>
   );
