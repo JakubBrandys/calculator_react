@@ -1,11 +1,12 @@
 import styled from "./Screen.module.css";
 
-const Screen = ({ value }) => {
+const Screen = ({ currentValue, previousValue }) => {
     return (
-        <div
-          className={styled.screen}
-        >
-          {value}
+        <div className={styled.screen}>
+          <div className={styled.previous}>{previousValue}</div>
+          <div className={styled.current}>
+            {currentValue}
+          </div>
         </div>
     );
 };
