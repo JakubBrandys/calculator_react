@@ -16,7 +16,7 @@ const Calculator = () => {
 
   return (
     <div className={styled.calculator}>
-      <Screen value={value} />
+      <Screen currentValue={value} previousValue="25325" />
       <Keyboard
         getValue={getValue}
         clearScreen={clearScreen}
