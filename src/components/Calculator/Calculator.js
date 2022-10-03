@@ -36,13 +36,18 @@ const Calculator = () => {
       return;
     }
 
+    if (currentValue === "-" && buttonValue === ".") {
+      setCurrentValue("-0.");
+      return;
+    }
+
     if (currentValue.length > 20) {
       return;
     }
 
     if (currentValue === "-" && buttonValue) {
       setCurrentValue(() =>`-${buttonValue}`);
-      return
+      return;
     }
      setCurrentValue((currentValue) =>`${currentValue + buttonValue}`);
   };
