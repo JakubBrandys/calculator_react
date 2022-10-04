@@ -31,8 +31,13 @@ const Calculator = () => {
       return;
     }
 
-    if (!currentValue && buttonValue === ".") {
+    if ((!currentValue || currentValue === "0") && buttonValue === ".") {
       setCurrentValue("0.");
+      return;
+    }
+
+    if (currentValue === "-" && buttonValue === ".") {
+      setCurrentValue("-0.");
       return;
     }
 
@@ -40,7 +45,11 @@ const Calculator = () => {
       return;
     }
 
-    setCurrentValue((currentValue) =>`${currentValue + buttonValue}`);
+    if (currentValue === "-" && buttonValue) {
+      setCurrentValue(() =>`-${buttonValue}`);
+      return;
+    }
+     setCurrentValue((currentValue) =>`${currentValue + buttonValue}`);
   };
 
   const clearScreen = () => {
@@ -51,16 +60,13 @@ const Calculator = () => {
   };
 
   const getSign = (buttonSign) => {
-    if (twiceValueFlag) {
+    if ((twiceValueFlag || buttonSign !== '-') && currentValue.length < 1) {
       return;
     }
 
-    if (isNaN(Number(currentValue))) {
-      clearScreen();
-      return;
-    }
-
-    if (!currentValue && buttonSign !== "-") {
+    if ((!currentValue && buttonSign === "-") || (currentValue === "-" && buttonSign)) {
+      setCurrentValue("-");
+      setPreviousValue("");
       return;
     }
 
