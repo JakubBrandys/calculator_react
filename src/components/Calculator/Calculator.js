@@ -31,7 +31,7 @@ const Calculator = () => {
       return;
     }
 
-    if (!currentValue && buttonValue === "." || currentValue === "0" && buttonValue === ".") {
+    if ((!currentValue || currentValue === "0") && buttonValue === ".") {
       setCurrentValue("0.");
       return;
     }
@@ -60,11 +60,11 @@ const Calculator = () => {
   };
 
   const getSign = (buttonSign) => {
-    if (twiceValueFlag || buttonSign !== '-' && currentValue.length < 1) {
+    if ((twiceValueFlag || buttonSign !== '-') && currentValue.length < 1) {
       return;
     }
 
-    if (!currentValue && buttonSign === "-" || currentValue === "-" && buttonSign) {
+    if ((!currentValue && buttonSign === "-") || (currentValue === "-" && buttonSign)) {
       setCurrentValue("-");
       setPreviousValue("");
       return;
